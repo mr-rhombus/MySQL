@@ -2,31 +2,31 @@
 
 
 -- 
--- DATABASES
+# DATABASES
 -- 
 
--- Create DB
+# Create DB
 -- CREATE DATABASE test_db;
 
 
--- Dropping DB
+# Dropping DB
 -- DROP DATABASE test_db;
 
 
--- Using DBs
+# Using DBs
 -- CREATE DATABASE test_db;
 -- USE test_db;
 
--- See which DB you're currently using
+# See which DB you are currently using
 -- SELECT DATABASE();
 -- DROP DATABASE test_db;
 
 
 -- 
--- TABLES
+# TABLES
 -- 
 
--- Create table
+# Create table
 -- CREATE DATABASE cat_app;
 -- USE cat_app;
 -- CREATE TABLE cats
@@ -36,17 +36,17 @@
 --     );
 
 
--- Delete table
+# Delete table
 -- USE cat_app;
 -- DROP TABLE cats; 
 
 
--- Challenge - Create my own table!
-CREATE DATABASE pastry_shop;
-USE pastry_shop;
-CREATE TABLE pastries
-    (
-        name        VARCHAR(30),
-        quantity    INT
-    );
+# Challenge - Create my own table!
+-- CREATE DATABASE pastry_shop;
+-- USE pastry_shop;
+-- CREATE TABLE pastries
+--     (
+--         name        VARCHAR(30),
+--         quantity    INT
+--     );
     

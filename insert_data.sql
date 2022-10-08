@@ -2,12 +2,12 @@
 
 USE cat_app;
 
--- INSERT
+# INSERT
 -- INSERT INTO cats(name, age)
 -- VALUES ('Jetson', 7); 
 
 
--- MULTIPLE INSERT
+# MULTIPLE INSERT
 -- INSERT INTO cats(name, age)
 -- VALUES
 --     ('Charlie', 10),
@@ -15,11 +15,11 @@ USE cat_app;
 --     ('Benji', 8);
 
 
--- NULL and NOT NULL
+# NULL and NOT NULL
 -- INSERT INTO cats(name)
 -- VALUES ('null age');
 
--- Enforce not null
+# Enforce not null
 -- CREATE TABLE cats2
 --     (
 --         name VARCHAR(100) NOT NULL,
@@ -28,7 +28,7 @@ USE cat_app;
 -- DESC cats2;
 
 
--- Default values
+# Default values
 -- CREATE TABLE cats3
 --     (
 --         name VARCHAR(100) NOT NULL DEFAULT 'no name',
@@ -37,7 +37,7 @@ USE cat_app;
 -- DESC cats3;
 
 
--- Primary Keys
+# Primary Keys
 -- CREATE TABLE unique_cats
 -- (
 --     cat_id INT NOT NULL AUTO_INCREMENT,
@@ -48,16 +48,16 @@ USE cat_app;
 -- DESC unique_cats;
 
 
--- Exercise
-CREATE DATABASE exercises;
-USE exercises;
-CREATE TABLE employees
-    (
-        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        last_name VARCHAR(100) NOT NULL,
-        first_name VARCHAR(100) NOT NULL,
-        middle_name VARCHAR(100),
-        age INT NOT NULL,
-        current_status VARCHAR(100) NOT NULL DEFAULT 'employed'
-    );
-DESC employees;
+# Exercise
+-- CREATE DATABASE exercises;
+-- USE exercises;
+-- CREATE TABLE employees
+--     (
+--         id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--         last_name VARCHAR(100) NOT NULL,
+--         first_name VARCHAR(100) NOT NULL,
+--         middle_name VARCHAR(100),
+--         age INT NOT NULL,
+--         current_status VARCHAR(100) NOT NULL DEFAULT 'employed'
+--     );
+-- DESC employees;
