@@ -1,6 +1,6 @@
 /*
 
-GROUP_CONCAT
+GROUP_CONCAT()
     - Returns row values in comma separated fashion
 
 col1    col2    ->      col1    col2
@@ -11,6 +11,10 @@ Y       'A'
 
 USING
     - Join 2 tables that share the same column name, and only use that 1 column
+    
+    ...
+    JOIN tbl2
+        USING (shared_col)
 
 col1    col2a     +     col1       col2b    ->      col1    col2a   col2b
 1       Aa              2          Bb               1       ...     ...
@@ -20,5 +24,12 @@ col1    col2a     +     col1       col2b    ->      col1    col2a   col2b
 
 HAVING
     - Used to subquery aggregated data from a GROUP BY
+
+
+COALESCE()
+    - Returns first non-null values from a group of columns
+    ex. 
+    SELECT ID, COALESCE(fname, sname, lname) as Name
+    FROM employees;
 
 */
