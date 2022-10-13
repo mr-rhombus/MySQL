@@ -12,55 +12,55 @@ Usage:
 */
 
 # Example
--- Return the type of customers based on the number of orders
--- SELECT
---     orders.customerNumber,
---     customers.customerName,
---     COUNT(orders.orderNumber) AS total_orders,
---     CASE
---         WHEN COUNT(orders.orderNumber) > 5 THEN 'High Volume'
---         WHEN COUNT(orders.orderNumber) BETWEEN 2 AND 4 THEN 'Medium Volume'
---         ELSE 'Low Volume'
---     END AS customer_class
--- FROM orders
--- INNER JOIN customers
---     USING (customerNumber)
--- GROUP BY orders.customerNumber;
+Return the type of customers based on the number of orders
+SELECT
+    orders.customerNumber,
+    customers.customerName,
+    COUNT(orders.orderNumber) AS total_orders,
+    CASE
+        WHEN COUNT(orders.orderNumber) > 5 THEN 'High Volume'
+        WHEN COUNT(orders.orderNumber) BETWEEN 2 AND 4 THEN 'Medium Volume'
+        ELSE 'Low Volume'
+    END AS customer_class
+FROM orders
+INNER JOIN customers
+    USING (customerNumber)
+GROUP BY orders.customerNumber;
 
 # Alternate solution
--- WITH cte AS (
---     SELECT
---         customers.customerName,
---         COUNT(orders.orderNumber) AS orderCount
---     FROM orders
---     INNER JOIN customers
---         USING (customerNumber)
---     GROUP BY orders.customerNumber
--- )
--- SELECT
---     *,
---     CASE
---         WHEN cte.orderCount > 4 THEN 'Loyal Customer'
---         WHEN cte.orderCount BETWEEN 2 and 4 THEN 'Repeat Customer'
---         WHEN cte.orderCount = 1 THEN 'One-time Customer'
---         ELSE 'Not a Customer'
---     END AS customerType
--- FROM cte;
+WITH cte AS (
+    SELECT
+        customers.customerName,
+        COUNT(orders.orderNumber) AS orderCount
+    FROM orders
+    INNER JOIN customers
+        USING (customerNumber)
+    GROUP BY orders.customerNumber
+)
+SELECT
+    *,
+    CASE
+        WHEN cte.orderCount > 4 THEN 'Loyal Customer'
+        WHEN cte.orderCount BETWEEN 2 and 4 THEN 'Repeat Customer'
+        WHEN cte.orderCount = 1 THEN 'One-time Customer'
+        ELSE 'Not a Customer'
+    END AS customerType
+FROM cte;
 
 
 # Example
 -- Sort customers by state if state is not NULL, otherwise sort by country
--- SELECT
---     CustomerName,
---     city,
---     state,
---     country
--- FROM customers
--- ORDER BY state, (
---     CASE
---         WHEN state IS NULL THEN country
---         ELSE state
---     END);
+SELECT
+    CustomerName,
+    city,
+    state,
+    country
+FROM customers
+ORDER BY state, (
+    CASE
+        WHEN state IS NULL THEN country
+        ELSE state
+    END);
 
 
 # Example
