@@ -1,3 +1,5 @@
+/*
+
 # Storing text
 - CHAR
     - Fixed length
@@ -83,3 +85,5 @@ SELECT name, DAY(birthdate), FROM people;
         content VARCHAR(100),
         changed_at TIMESTAMP DEFAULT NOW() ON UPDATE NOW()
     )
+
+    */
