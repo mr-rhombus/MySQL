@@ -32,4 +32,14 @@ COALESCE()
     SELECT ID, COALESCE(fname, sname, lname) as Name
     FROM employees;
 
+
+VIEWS
+    - A virtual table based on a result-set of an SQL statement
+
+    CREATE VIEW <vw_name> AS (
+        SELECT *
+        FROM <tbl>
+        WHERE <conditions>
+    );
+
 */
