@@ -38,6 +38,7 @@ HAVING
 
 COALESCE()
     - Returns first non-null values from a group of columns
+    - Different than IFNULL(), which only checks if a single value is NULL
     ex. 
     SELECT ID, COALESCE(fname, sname, lname) as Name
     FROM employees;
@@ -49,6 +50,18 @@ ISNULL(expr)
 Ex.
     SELECT ISNULL(NULL); -- 1
     SELECT ISNULL(1); -- 0
+
+
+POWER(a, b)
+    - Takes a to the power of b
+
+
+ROUND(a, b)
+    - Rounds a to b decimal places
+
+
+SQRT(a)
+    - Takes the square root of a
 
 
 VIEWS
