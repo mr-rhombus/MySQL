@@ -1,5 +1,9 @@
 /*
 
+UNION vs UNION ALL
+    - UNION returns unique records from all tables
+    - UNION ALL returns ALL records from all tables
+
 GROUP_CONCAT()
     - Returns row values in comma separated fashion
 
