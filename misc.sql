@@ -86,6 +86,10 @@ SQRT(a)
     - Takes the square root of a
 
 
+ABS(x)
+    - Takes the absolute value of x
+
+
 VIEWS
     - A virtual table based on a result-set of an SQL statement
 
