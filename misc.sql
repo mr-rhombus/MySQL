@@ -24,6 +24,13 @@ X       'B'             Y       'A'
 Y       'A'
 
 
+SPECIAL "WHERE"
+    - You can specify groupings of values to compare in a "WHERE" clause
+
+    ex. WHERE (p1.x, p1.y) != (p2.x, p2.y)
+        - This makes the query a lot nicer to read, and ensures you don't have to use CONCAT
+
+
 GREATEST/LEAST(val1, val2, ...)
     - Return the greatest/smallest values
 
