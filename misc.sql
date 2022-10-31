@@ -4,6 +4,17 @@ UNION vs UNION ALL
     - UNION returns unique records from all tables
     - UNION ALL returns ALL records from all tables
 
+
+FULL OUTER JOIN
+    - MySQL doesn't natively support OUTER JOINs, but you can induce one by doing the following:
+
+    SELECT
+        t1.x, t1.y, t2.x, t2.y
+    FROM table t1, table t2
+
+    - Optionally eliminate the same record by specifying "WHERE t1.x != t2.x AND t1.y != t2.y"
+
+
 GROUP_CONCAT()
     - Returns row values in comma separated fashion
 
