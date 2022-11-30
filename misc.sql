@@ -90,6 +90,14 @@ ABS(x)
     - Takes the absolute value of x
 
 
+LEAST(a, b)
+    - Returns the lesser value of a and b
+
+
+GREATEST(a, b)
+    - Returns the greater value of a and b
+
+
 VIEWS
     - A virtual table based on a result-set of an SQL statement
 
